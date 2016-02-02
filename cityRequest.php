@@ -67,10 +67,9 @@ class Model {
 
 // On initialise la connexifon $pdo un fois pour toufte
 Model::set_static ();
+// Remplir ici !
 $name = $_GET ["name"];
 $villes = Model::selectByName ( $name );
 json_encode ( $villes );
-echo "yolo";
-// Remplir ici !
-include("Completion.html");
+echo json_encode ( $villes );
 ?>
