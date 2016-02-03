@@ -32,10 +32,5 @@ function cityRequest(nom_ville) {
 var clavier = "";
 document.onkeydown = function(event) {
 	console.log(event.key);
-	if (event.key = "Backspace") {
-		clavier = clavier.substring(0, clavier.length - 1);
-	} else {
-		clavier += event.key;
-	}
-	cityRequest(clavier);
+	setTimeout(cityRequest(clavier), 200));
 }
