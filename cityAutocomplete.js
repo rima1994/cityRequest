@@ -1,5 +1,6 @@
 var villes = {
 	liste_villes : document.querySelector("#myac"),
+	valeur_saisie = document.querySelector("#acdiv"),
 	reponse : "",
 	afficheVilles : function() {
 		this.liste_villes.innerHTML = "";
@@ -34,3 +35,8 @@ document.onkeydown = function(event) {
 	console.log(event.key);
 	setTimeout(cityRequest(clavier), 200));
 }
+var bouton = villes.valeur_saisie;
+bouton.addEventListener("click", function(event) {
+	clavier = event.target;
+	game.fiftyfifty(event);
+})
